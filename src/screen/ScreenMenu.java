@@ -15,7 +15,8 @@ public class ScreenMenu {// 메뉴판을 설계
     }
 
     private void initializeScreen() {
-        screenMap.put(MenuIndex.MAIN,"\"SHAKESHACK BURGER 에 오신걸 환영합니다.\"\n" +
+        screenMap.put(MenuIndex.MAIN, "===============================================================\n" +
+                "\"SHAKESHACK BURGER 에 오신걸 환영합니다.\"\n" +
                 "아래 메뉴판을 보시고 메뉴를 골라 입력해주세요.\n" +
                 "\n" +
                 "[ SHAKESHACK MENU ]\n" +
@@ -27,18 +28,22 @@ public class ScreenMenu {// 메뉴판을 설계
                 "[ ORDER MENU ]\n" +
                 "5. Order       | 장바구니를 확인 후 주문합니다.\n" +
                 "6. Cancel      | 진행중인 주문을 취소합니다.");
-        screenMap.put(MenuIndex.CART,"위 메뉴를 장바구니에 추가하시겠습니까?\n" +
+        screenMap.put(MenuIndex.CART,"\n\n위 메뉴를 장바구니에 추가하시겠습니까?\n" +
                 "1. 확인        2. 취소");
-        screenMap.put(MenuIndex.ORDER_CANCEL,"진행하던 주문을 취소하시겠습니까?\n" +
+        screenMap.put(MenuIndex.ORDER_CANCEL,"\n\n진행하던 주문을 취소하시겠습니까?\n" +
                 "1. 확인        2. 취소");
-        screenMap.put(MenuIndex.ORDER,"아래와 같이 주문 하시겠습니까?\n" +
+        screenMap.put(MenuIndex.ORDER,"\n\n" +
+                "===============================================================\n" +
+                "아래와 같이 주문 하시겠습니까?\n" +
                 "\n" +
                 "[ Orders ]");
         screenMap.put(MenuIndex.TOTAL,"\n" +
                 "[ Total ]");
         screenMap.put(MenuIndex.ORDER_OPTION,"\n" +
                 "1. 주문      2. 메뉴판");
-        screenMap.put(MenuIndex.SELECT,"\n\n\"SHAKESHACK BURGER 에 오신걸 환영합니다.\"\n" +
+        screenMap.put(MenuIndex.SELECT,"\n\n" +
+                "===============================================================\n" +
+                "\"SHAKESHACK BURGER 에 오신걸 환영합니다.\"\n" +
                 "아래 주문을 확인해주세요\n");
     }
 }

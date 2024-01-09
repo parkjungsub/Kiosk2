@@ -17,6 +17,8 @@ public class Kiosk {
     int select;// 메뉴 들어가는 변수
     int option;
 
+    double sum;
+
     public void start(){
         while (true) {
             System.out.println(screenMenu.getScreenMenu(MenuIndex.MAIN)); // 처음 메뉴판
@@ -39,7 +41,7 @@ public class Kiosk {
                     }
                 case 2:
                     System.out.println(screenMenu.getScreenMenu(MenuIndex.SELECT)); // 버거 메뉴판
-                    print.printDrinks();// 쉐이크 리스트 출력
+                    print.printShakes();// 쉐이크 리스트 출력
                     option = sc.nextInt(); // 쉐이크 선택
                     System.out.println("\n\n");
                     print.getShake(option-1);//선택한 쉐이크 리스트 출력
@@ -57,7 +59,7 @@ public class Kiosk {
                     print.printDrinks();// 음료 리스트 출력
                     option = sc.nextInt(); // 음료 선택
                     System.out.println("\n\n");
-                    print.getBurger(option-1);//선택한 음료 리스트 출력
+                    print.getDrink(option-1);//선택한 음료 리스트 출력
                     System.out.println(screenMenu.getScreenMenu(MenuIndex.CART)); // 장바구니에 담을건지 질문
                     select = sc.nextInt(); // 장바구니 담기
                     if (select == 1) {
@@ -83,7 +85,23 @@ public class Kiosk {
                         break;
                     }
                 case 5:
+                    if (order.getOrderList().size() == 0){
+                        System.out.println("\n\n\n장바구니가 비워져있습니다. \n\n");
+                        break;
+                    }
+                    System.out.println(screenMenu.getScreenMenu(MenuIndex.ORDER));
                     order.getMenu();// 장바구니 출력
+                    System.out.println(screenMenu.getScreenMenu(MenuIndex.TOTAL));
+                    order.sumOrderList();
+                    System.out.println(screenMenu.getScreenMenu(MenuIndex.ORDER_OPTION));
+                    select = sc.nextInt();
+                    if (select == 1){
+                        System.out.println("\n\n주문이 완료되었습니다.\n\n");
+                        order.listClear();// 장바구니 비우기
+                    }else if(select == 2){
+                        break;
+                    }
+                    break;
                 case 6:
                     order.listClear();// 장바구니 비우기
                     break;
