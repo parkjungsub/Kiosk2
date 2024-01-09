@@ -18,6 +18,6 @@ public class Order {
     }
 
     public void listClear(){
-        orderlist.clear();
+        orderlist.clear(); // 장바구니 비우기
     }
 }
