@@ -4,7 +4,7 @@ import product.Menu;
 
 import java.util.ArrayList;
 public class Order {
-    ArrayList<Menu> orderlist = new ArrayList<Menu>();
+    private ArrayList<Menu> orderlist = new ArrayList<Menu>(); //todo 객체 중복제거하기
     public void setMenu(Menu order){ //장바구니 담기
         this.orderlist.add(order);
         // order.orderMenu();todo 주문 횟수 새는거 구현

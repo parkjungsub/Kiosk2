@@ -3,7 +3,7 @@ package product;
 public class Menu {
     private String name;
     private String explanation;
-    private  double price;
+    private double price;
 
   //  private int quantity; todo 주문 횟수 새는거 구현
 

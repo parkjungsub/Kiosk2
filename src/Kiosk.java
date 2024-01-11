@@ -14,10 +14,12 @@ public class Kiosk {
     ProductData productData = new ProductData();
     Order order = new Order();
     Print print = new Print();
+
+
     int select;// 메뉴 들어가는 변수
     int option;
-
     double sum;
+
 
     public void start(){
         while (true) {
@@ -33,14 +35,14 @@ public class Kiosk {
                     System.out.println(screenMenu.getScreenMenu(MenuIndex.CART)); // 장바구니에 담을건지 질문
                     select = sc.nextInt(); // 장바구니 담기
                     if (select == 1) {
-                        order.setMenu(productData.getBurgerData(option));// 장바구니 담기
+                        order.setMenu(productData.getBurgerData(option-1));// 장바구니 담기
                         break;
                     } else if (select == 2) {// 장바구니 담기 취소
                         System.out.println("진행하던 주문이 취소되었습니다.");
                         break;
                     }
                 case 2:
-                    System.out.println(screenMenu.getScreenMenu(MenuIndex.SELECT)); // 버거 메뉴판
+                    System.out.println(screenMenu.getScreenMenu(MenuIndex.SELECT)); // 쉐이크 메뉴판
                     print.printShakes();// 쉐이크 리스트 출력
                     option = sc.nextInt(); // 쉐이크 선택
                     System.out.println("\n\n");
@@ -48,14 +50,14 @@ public class Kiosk {
                     System.out.println(screenMenu.getScreenMenu(MenuIndex.CART)); // 장바구니에 담을건지 질문
                     select = sc.nextInt(); // 장바구니 담기
                     if (select == 1) {
-                        order.setMenu(productData.getShakeData(option));// 장바구니 담기
+                        order.setMenu(productData.getShakeData(option-1));// 장바구니 담기
                         break;
                     } else if (select == 2) {// 장바구니 담기 취소
                         System.out.println("진행하던 주문이 취소되었습니다.");
                         break;
                     }
                 case 3:
-                    System.out.println(screenMenu.getScreenMenu(MenuIndex.SELECT)); // 버거 메뉴판
+                    System.out.println(screenMenu.getScreenMenu(MenuIndex.SELECT)); // 드링크 메뉴판
                     print.printDrinks();// 음료 리스트 출력
                     option = sc.nextInt(); // 음료 선택
                     System.out.println("\n\n");
@@ -63,14 +65,14 @@ public class Kiosk {
                     System.out.println(screenMenu.getScreenMenu(MenuIndex.CART)); // 장바구니에 담을건지 질문
                     select = sc.nextInt(); // 장바구니 담기
                     if (select == 1) {
-                        order.setMenu(productData.getDrinkData(option));// 장바구니 담기
+                        order.setMenu(productData.getDrinkData(option-1));// 장바구니 담기
                         break;
                     } else if (select == 2) {// 장바구니 담기 취소
                         System.out.println("진행하던 주문이 취소되었습니다.");
                         break;
                     }
                 case 4:
-                    System.out.println(screenMenu.getScreenMenu(MenuIndex.SELECT)); // 버거 메뉴판
+                    System.out.println(screenMenu.getScreenMenu(MenuIndex.SELECT)); // 맥주 메뉴판
                     print.printBeers();//맥주 리스트 출력
                     option = sc.nextInt(); //맥주 선택
                     System.out.println("\n\n");
@@ -78,7 +80,7 @@ public class Kiosk {
                     System.out.println(screenMenu.getScreenMenu(MenuIndex.CART)); // 장바구니에 담을건지 질문
                     select = sc.nextInt(); // 장바구니 담기
                     if (select == 1) {
-                        order.setMenu(productData.getBeerData(option));//장바구니에 담기
+                        order.setMenu(productData.getBeerData(option-1));//장바구니에 담기
                         break;
                     } else if (select == 2) {// 장바구니 담기 취소
                         System.out.println("진행하던 주문이 취소되었습니다.");
@@ -97,13 +99,13 @@ public class Kiosk {
                     select = sc.nextInt();
                     if (select == 1){
                         System.out.println("\n\n주문이 완료되었습니다.\n\n");
-                        order.listClear();// 장바구니 비우기
+                        order.listClear();
                     }else if(select == 2){
                         break;
                     }
                     break;
                 case 6:
-                    order.listClear();// 장바구니 비우기
+                    order.listClear();
                     break;
 
             }
