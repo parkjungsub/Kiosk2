@@ -5,13 +5,13 @@ public class Menu {
     private String explanation;
     private double price;
 
-  //  private int quantity; todo 주문 횟수 새는거 구현
+    //  private int quantity; todo 주문 횟수 새는거 구현
 
-    public Menu(String name, String explanation, double price){
+    public Menu(String name, String explanation, double price) {
         this.name = name;
         this.explanation = explanation;
         this.price = price;
-       // this.quantity = 0; todo 주문 횟수 새는거 구현
+        // this.quantity = 0; todo 주문 횟수 새는거 구현
     }
 
 //    public void orderMenu(){ todo 주문 횟수 새는거 구현
@@ -25,11 +25,11 @@ public class Menu {
         return name;
     }
 
-    public String getExplanation(){
+    public String getExplanation() {
         return explanation;
     }
 
-    public double getPrice(){
+    public double getPrice() {
         return price;
     }
 }
