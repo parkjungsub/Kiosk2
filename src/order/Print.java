@@ -1,9 +1,17 @@
 package order;
 
 import data.ProductData;
+import product.Menu;
 
 public class Print {
     ProductData productData = new ProductData();
+
+
+    public void printProduct(Menu menu) {
+        for (int i = 0; i < productData.getBeers().size(); i++) {
+            System.out.println((i + 1) + ". " + productData.getBeers().get(i).getName() + "   | W " + productData.getBeers().get(i).getPrice() + "| " + productData.getBeers().get(i).getExplanation());
+        }
+    }
 
     public void printBeers() {
         for (int i = 0; i < productData.getBeers().size(); i++) {

@@ -3,9 +3,10 @@ package order;
 import product.Menu;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Order {
-    private ArrayList<Menu> orderlist = new ArrayList<Menu>(); //todo 객체 중복제거하기
+    private List<Menu> orderlist = new ArrayList<Menu>(); //todo 객체 중복제거하기
 
     public void setMenu(Menu order) { //장바구니 담기
         this.orderlist.add(order);
@@ -18,7 +19,7 @@ public class Order {
         }
     }
 
-    public ArrayList<Menu> getOrderList() {
+    public List<Menu> getOrderList() {
         return orderlist;
     }
 

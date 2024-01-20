@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductData {
-    private ArrayList<Menu> beers = new ArrayList<Menu>();
-    private ArrayList<Menu> burgers = new ArrayList<Menu>();
-    private ArrayList<Menu> drinks = new ArrayList<Menu>();
-    private ArrayList<Menu> shakes = new ArrayList<Menu>();
+    private List<Menu> beers = new ArrayList<Menu>();
+    private List<Menu> burgers = new ArrayList<Menu>();
+    private List<Menu> drinks = new ArrayList<Menu>();
+    private List<Menu> shakes = new ArrayList<Menu>();
 
     public ProductData() {
         initializeData();
@@ -39,19 +39,19 @@ public class ProductData {
 
     }
 
-    public ArrayList<Menu> getBeers() {
+    public List<Menu> getBeers() {
         return beers;
     }
 
-    public ArrayList<Menu> getDrinks() {
+    public List<Menu> getDrinks() {
         return drinks;
     }
 
-    public ArrayList<Menu> getBurgers() {
+    public List<Menu> getBurgers() {
         return burgers;
     }
 
-    public ArrayList<Menu> getShakes() {
+    public List<Menu> getShakes() {
         return shakes;
     }
 

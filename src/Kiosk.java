@@ -15,11 +15,9 @@ public class Kiosk {
     Order order = new Order();
     Print print = new Print();
 
-
     int select;// 메뉴 들어가는 변수
     int option;
     double sum;
-
 
     public void start() {
         while (true) {
